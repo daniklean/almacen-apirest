@@ -15,10 +15,9 @@ app.use(express.json())
 app.use(cors())
 
 //Routes 
-
 app.use('/almacen', require('./app/routes'))
 
 dbConnect()
-//Escuchando el servidor en el puerto + la Ruta directa + color de identificación 
+//Escuchando el servidor en el puerto + la Ruta directa + prefijo: almacen
 app.listen(app.get("port"), () =>
-  console.log(`Run server in http://127.0.0.1:${app.get("port")}`))
+  console.log(`Servidor corriendo en http://127.0.0.1:${app.get("port")}/almacen`))
