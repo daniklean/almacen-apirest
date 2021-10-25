@@ -13,7 +13,7 @@ fs.readdirSync(pathRouter).filter((file) => {
     const saltar = ['index'].includes(archivoSinExtension )
     if(!saltar){
         router.use(`/${archivoSinExtension }`, require(`./${archivoSinExtension }`))
-        console.log(`Rutas dimamicas usar directamente, ==> http://127.0.0.1:3000/almacen/${archivoSinExtension}`)
+        console.log(`Rutas Dimamicas, usar ==> ${archivoSinExtension} en la Url del localhost:3000/almacen` )
     }
 })
 
